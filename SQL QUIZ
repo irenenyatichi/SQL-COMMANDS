@@ -1,0 +1,43 @@
+SQL QUIZ
+
+
+Students
+
+id	names 		town 	marks
+1	Jane Adam	Nairobi 	88
+2	Tom Keen	Nakuru		92
+3	Alice Emma	Ruiru 		65
+4	Cate Leo	Lodwar 		78
+5	Esther Wall	Nairobi 	97
+6	Mary Kay	Mombasa 	84
+
+
+1.ALL QUERIES
+SELECT * FROM students;
+
+2.NAMES AND MARKS OF ALL STUDENTS
+SELECT name,marks FROM students;
+
+3.ALL UNIQUE TOWNS
+SELECT DISTINCT town FROM students;
+
+4.NAMES OF STUDENTS FROM RUIRU
+SELECT name FROM students WHERE town='Ruiru';
+
+5.STUDENTS MARKS ABOVE 85
+SELECT * FROM students WHERE marks='>85';
+
+6.ASCENDING ORDER OF STUDENT MARKS
+SELECT names,marks FROM students ORDER BY marks ASC;
+
+7.STUDENTS OVER 80MARKS FROM LODWAR
+SELECT name FROM students WHERE town='Lodwar' AND marks='>80';
+
+8.STUDENTS OVER 70MARKS FROM OUTSIDE NAIROBI
+SELECT name FROM students WHERE NOT town='Nairobi' AND marks='<70';
+
+9.STUDENTS IN ALPHABETICAL ORDER
+SELECT * FROM students ORDER BY name ASC;
+
+10.STUDENTS RESIDING IN NAIROBI OR MARKS ABOVE 80
+SELECT name FROM students WHERE town='Nairobi' OR marks='>80';
